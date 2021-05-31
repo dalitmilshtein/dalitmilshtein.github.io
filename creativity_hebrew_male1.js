@@ -344,10 +344,6 @@ define(['pipAPI'], function(APIconstructor) {
             {inherit:'Q3'},
             {inherit:'Q4'},
             {inherit:'Q5'},
-            {inherit:'Q6'},
-            {inherit:'Q7'},
-            {inherit:'Q8'},
-            {inherit:'Q9'},
             { media: '<%= trialData.text %>', css:{fontSize: '30px'}, handle:'target', data:{sid:'<%= trialData.sid %>'}}
 
 
@@ -448,9 +444,9 @@ define(['pipAPI'], function(APIconstructor) {
 				{   
 				    
 					mixer: 'repeat',
-					times: 70,
+					times: 120,
 					data: [
-                        {inherit:{set:'scripts', type:'equalDistribution', n: 70, seed:'a'}, data:{block: 'practice'}}
+                        {inherit:{set:'scripts', type:'equalDistribution', n:120, seed:'a'}, data:{block: 'practice'}}
 					]
 				}
 			]
