@@ -447,48 +447,38 @@ define(['pipAPI'], function(APIconstructor) {
         {inherit: 'stimulus_trial', data: {text: 'أسير بالشارع تحت المطر وأرى عجوزا يرتجف على مقعد', sid: 88}},
         {inherit: 'stimulus_trial', data: {text: 'احدهم يأكل بجواري ويبصق بالخطأ كتلة من البلغم لصحني ', sid: 89}},
         {inherit: 'stimulus_trial', data: {text: 'انا في امتحان ولا أتذكر كلمه مما قد درست', sid: 90}},
-        {inherit: 'stimulus_trial', data: {text: 'محاضرتي الجامعيه تحاول ان تغتصبني بعد ان قمت برفضها ', sid: 91}},
-        {inherit: 'stimulus_trial', data: {text: ' انا اغفو بالقطار وتسرق حقيبتي اللتي تحتوي حاسوبي النقال    ', sid: 92}},
-        {inherit: 'stimulus_trial', data: {text: 'جدي يقوم بتعنيفي امام والداي وهم لا يحركون ساكنا  ', sid: 93}},
-        {inherit: 'stimulus_trial', data: {text: 'امي تخبرني ان لديها كتل سرطانيه منتشره بانحاء جسدها  ', sid: 94}},
-        {inherit: 'stimulus_trial', data: {text: 'انا انتظر مع ابي في المشفى لتلقيه العلاج الكيميائي ', sid: 95}},
-        {inherit: 'stimulus_trial', data: {text: ' انا ارى علامه موجبه على فاحص  حمل لاختي العزباء   ', sid: 96}},
-        {inherit: 'stimulus_trial', data: {text: ' في حين تجولي خارجا اسمع صوت صافرات وذوي انفجار   ', sid: 97}},
-	{inherit: 'stimulus_trial', data: {text: 'بسبب جرح لم اعاينه في يدي سيقومون بقطعها كليا  ', sid: 98}},
-        {inherit: 'stimulus_trial', data: {text: 'انتهى اليوم ولم اتلقى اي تهنئه بمناسبة عيد ميلادي ', sid: 99}},
-        {inherit: 'stimulus_trial', data: {text: ' انا اقف خلف الباب واسمع أصدقائي يقومون بالسخرية مني ', sid: 100}},
-        {inherit: 'stimulus_trial', data: {text: 'بسبب ازديادي  بالوزن لا اقدر على غلق زر بنطالي  ', sid: 101}},
-        {inherit: 'stimulus_trial', data: {text: 'عجوز يتجاوزني في الطابور معلقا ان لا مكان لعربي هنا    ', sid: 102}},
-        {inherit: 'stimulus_trial', data: {text: 'اذهب للملجا بعد سماع الصافرات واليهود لا يقومون بادخالي   ', sid: 103}},
-        {inherit: 'stimulus_trial', data: {text: 'بعد ان تخرجت بامتياز لا يوظفونني بسبب كوني عربيا   ', sid: 104}},
-        {inherit: 'stimulus_trial', data: {text: '      انا ادخل يدي الى جيبي ولا اجد الشيك فيها   ', sid: 105}},
-        {inherit: 'stimulus_trial', data: {text: 'اكتشف اني القيت للنفايات المال الذي اعطتني إياه امي  ', sid: 106}},
-        {inherit: 'stimulus_trial', data: {text: '    اكتشف ان المال اللذي وفرته جانبا للسفر قد سرق ', sid: 107}},
-        {inherit: 'stimulus_trial', data: {text: 'انا اقوم بتغليف رزمة ورق واضعهم في داخل الصناديق ', sid: 108}},
-        {inherit: 'stimulus_trial', data: {text: ' انا ادخل الصف واجلس على كرسيي منتظرا حضور المحاضر ', sid: 109}},
-        {inherit: 'stimulus_trial', data: {text: 'انتظر ثلاث دقائق حتى يسخن الماء في المسخن الكهربائي   ', sid: 110}},
-        {inherit: 'stimulus_trial', data: {text: 'انا اسمع صوت الناس يتهامسون في الغرفه المجاوره الي   ', sid: 111}},
-        {inherit: 'stimulus_trial', data: {text: 'أقوم بإزالة الغطاء عن العلبه وارميه في سلة القمامه  ', sid: 112}},
-        {inherit: 'stimulus_trial', data: {text: 'انا انعطف لليمين اعبر من خلف الحديقه نحو البيت   ', sid: 113}},
-	{inherit: 'stimulus_trial', data: {text: 'أقوم بشغيل الجهاز بعد ان قرات التعليمات حول استخدامه ', sid: 114}},
-	{inherit: 'stimulus_trial', data: {text: 'أقوم بشغيل الجهاز بعد ان قرات التعليمات حول استخدامه ', sid: 115}},   
-	{inherit: 'stimulus_trial', data: {text: 'أقوم بشغيل الجهاز بعد ان قرات التعليمات حول استخدامه ', sid: 116}},   
-        {inherit: 'stimulus_trial', data: {text: 'أقوم بوضع اشاره الى اين وصلت في الكتاب واغلقه ', sid: 117}},
-        {inherit: 'stimulus_trial', data: {text: 'انا ادخل الى الصالون واعبر منه الى الشرفه الاماميه  ', sid: 118}},
-        {inherit: 'stimulus_trial', data: {text: 'انا اضع اللاصقات على الكتب وارتبهم على رف المكتبه   ', sid: 119}},
-        {inherit: 'stimulus_trial', data: {text: 'انا افتح خزانة المطبخ لكي اتناول ملعقة طعام وصحن    ', sid: 120}},
+        {inherit: 'stimulus_trial', data: {text: 'انا ابني برج مثلثات ومكعبين بلون  احمر اخضر واصفر', sid: 91}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اوزع لكل واحد من اللاعبين بطاقات بالوان مختلفه', sid: 92}},
+        {inherit: 'stimulus_trial', data: {text: 'انا احرك يدي اليمين ورجلي الشمال للاعلى وللاسفل مرارا', sid: 93}},
+        {inherit: 'stimulus_trial', data: {text: 'انا افتح خزانة المطبخ لكي اتناول صحون طعام وقنينة ', sid: 94}},
+        {inherit: 'stimulus_trial', data: {text: 'أرتدي زوجًا من الأحذية الرياضية البيضاء يحتوي خمسة أزرار', sid: 95}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اطوي ثماني وراقات بروستول على  شكل معين ومثلثات', sid: 96}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اخطو خمس خطوات للامام قبل ان التف شمالار', sid: 97}},
+	{inherit: 'stimulus_trial', data: {text: 'نا أقوم بلف العلبة بورق شفاف وشريط مخطط برتقالي', sid: 98}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اضع المغلف داخل الدرج تحت الأوراق الموجوده فيه', sid: 99}},
+        {inherit: 'stimulus_trial', data: {text: ' انا ارجع الكتاب المستعار من المكتبه قبل خروجي منها', sid: 100}},
+        {inherit: 'stimulus_trial', data: {text: 'أقوم بتغيير ترتيب الصفحات في الرزمة الملفوفة في الجريدة', sid: 101}},
+        {inherit: 'stimulus_trial', data: {text: 'انا ادخل للصندوق زجاجات البلاستيك واضعها بجانب زجاجات الزجاج', sid: 102}},
+        {inherit: 'stimulus_trial', data: {text: 'انا ارسم على الورقه ثلاث مربعات وخمس مثلثات صفراء', sid: 103}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اضع مجلد الدراسة في اعلى رف من المكتبة ', sid: 104}},
+        {inherit: 'stimulus_trial', data: {text: ' انتظر ثلاث دقائق حتى يسخن الماء في المسخن الكهربائي', sid: 105}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اتفقد وجود أوراق فارغه داخل الدفتر صالحه للاستعمال', sid: 106}},
+        {inherit: 'stimulus_trial', data: {text: 'انا أصنع ثلاثة أكوام مختلفة من الملابس بألوان مختلفة', sid: 107}},
+        {inherit: 'stimulus_trial', data: {text: 'انا ارفع حقيبتي عن الأرض واضعها على سطح المكتب', sid: 108}},
+        {inherit: 'stimulus_trial', data: {text: 'انا أقوم بسؤال السيكرتيرة عن موعد اغلاق مكتب العمل', sid: 109}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اجمع كل القناني واضعهم  داخل صندوق من الكرتون', sid: 110}},
+        {inherit: 'stimulus_trial', data: {text: 'أنا افك رزمة الصفحات لكي أقوم بترتيبها في مجلدات', sid: 111}},
+        {inherit: 'stimulus_trial', data: {text: 'انا ابعث المكتوب بالبريد بعد ان وضعته بالمغلف البني', sid: 112}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اتفقد الرسائل في بريدي الالكتروني من خلال حاسوبي ', sid: 113}},
+	{inherit: 'stimulus_trial', data: {text: 'أقوم بشغيل الجهاز بعد ان قرات التعليمات حول استخدامه', sid: 114}},
+	{inherit: 'stimulus_trial', data: {text: 'انا اوظب طاولة الطعام ثم أقوم بتشغيل جلاية الصحون', sid: 115}},   
+	{inherit: 'stimulus_trial', data: {text: 'أقوم بوضع اشاره الى اين وصلت في الكتاب واغلقه', sid: 116}},   
+        {inherit: 'stimulus_trial', data: {text: 'انا أوصل حاسوبي النقال لقابس الكهرباء لكي أقوم بشحنه', sid: 117}},
+        {inherit: 'stimulus_trial', data: {text: 'اكتب في الدفتر ثلاث  جمل ونصف بقلم من المقلمة', sid: 118}},
+        {inherit: 'stimulus_trial', data: {text: 'انا افصل هاتفي من الشاحن واقوم بارجاعه الى جيبي', sid: 119}},
+        {inherit: 'stimulus_trial', data: {text: 'انا اقوم بثقب الأوراق قبل اضافتهم الى مجلد الدراسه', sid: 120}},
        
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-    ]);
+       ]);
    
     /***********************************************
     // Sequence
