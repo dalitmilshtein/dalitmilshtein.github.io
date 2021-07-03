@@ -1,4 +1,5 @@
-define(['pipAPI'], function(APIconstructor) {
+
+	define(['pipAPI'], function(APIconstructor) {
   
   var API     = new APIconstructor();
   API.addSettings('onEnd', window.minnoJS.onEnd);
@@ -49,16 +50,16 @@ define(['pipAPI'], function(APIconstructor) {
  	    version_id   : version_id,
  	    answers      : answers,
         instructions: {
-            inst_welcome : ` 
+             inst_welcome : ` 
                             <p> במהלך הניסוי תתבקשו לקרוא ולדמיין 120 משפטים    </p></br>
                             <p>  לאחר  כול משפטים תתבקשו לענות על 6 שאלות </p></br>                          
                             <p> אתם בוחרים את התשובה המתאימה לכם באמצעות לחיצה על מקש המקלדת  </p></br>
                             <p>אנא הקישו על מקש הרווח במקלדת על מנת להתחיל  </p>`,
-          
+                    
 
             inst_bye     : `<p>הניסוי הסתיים</p> 
-                            <p>עתה נבקש מכם לענות על מספר שאלות משוב קצרות</p>
-                            <p>להמשך לחץ על מקש רווח</p>`
+                            <p>תודה על השתתפותכם</p>
+                            <p>לסיום לחץ על מקש רווח</p>`
         },
         times: {
             fixation_duration : 500,
@@ -87,6 +88,7 @@ define(['pipAPI'], function(APIconstructor) {
         image : global.baseURL
     });
 
+
     /***********************************************
     // Stimuli
      ***********************************************/
@@ -102,9 +104,9 @@ define(['pipAPI'], function(APIconstructor) {
 	    
     });
 
-
-    API.addStimulusSets({
+API.addStimulusSets({
         inst_welcome : [{media: {html: current.instructions.inst_welcome}}],
+        inst_start   : [{media: {html: current.instructions.inst_start}}],
         inst_bye     : [{media: {html: current.instructions.inst_bye}}]
     });
 
