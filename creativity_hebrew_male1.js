@@ -95,16 +95,18 @@
 
     API.addStimulusSets({
         defaultStim : [{css:{color:'black', 'font-size':'30px'}}],
-        Q1          : [{inherit:'defaultStim', media: 'סמן מה עוצמת הרגש שהתעורר בך כשקראת ודימיינת את המשפט  </p></br> מ-1 שום רגש כלל עד 9 רגש עז מאוד'}],    
-	Q2         : [{inherit:'defaultStim', media: 'סמן מה הסיכוי שתמצא את עצמך במצב המתואר במשפט  </p></br>  מ-1 אין סיכוי כלל עד 9 סיכוי רב מאוד'}],
-        Q3         : [{inherit:'defaultStim', media: 'סמן עד כמה המצב שאתה מדמיין חי ומפורט  </p></br>  מ-1 כלל לא חי ומפורט עד 9 חי ומפורט מאוד  '}],
-        Q4          : [{inherit:'defaultStim', media: 'סמן כמה מאמץ השקעת על מנת להפסיק לחשוב על המצב המתואר במשפט  </p></br> מ-1 ללא מאמץ כלל עד 9 מאמץ רב'}],    
-	Q5         : [{inherit:'defaultStim', media: 'סמן כמה המצב המתואר במשפט קשור לפחדים שלך  </p></br>  מ-1 קשור מאוד עד 9 לא קשור כלל'}], 
-        Q6         : [{inherit:'defaultStim', media: 'סמן עד כמה המצב המתואר במשפט רלוונטי לחיים של סטודנטים יהודים וערבים בישראל  </p></br> מ-1 רלוונטי לסטונטים ערבים בלבד עד 9 רוונטי לסטודנטים יהודים בלבד '}]  
+        Q1          : [{inherit:'defaultStim', media: 'סמן מה עוצמת הרגש שהתעורר בך כשקראת ודימיינת את המשפט  מ-1 שום רגש כלל עד 9 רגש עז מאוד'}],    
+	Q2         : [{inherit:'defaultStim', media: 'סמן מה הסיכוי שתמצא את עצמך במצב המתואר במשפט מ-1 אין סיכוי כלל עד 9 סיכוי רב מאוד'}],
+        Q3         : [{inherit:'defaultStim', media: 'סמן עד כמה המצב שאתה מדמיין חי ומפורט מ-1 כלל לא חי ומפורט עד 9 חי ומפורט מאוד  '}],
+        Q4          : [{inherit:'defaultStim', media: 'סמן כמה מאמץ השקעת על מנת להפסיק לחשוב על המצב המתואר במשפט מ-1 ללא מאמץ כלל עד 9 מאמץ רב'}],    
+	Q5         : [{inherit:'defaultStim', media: 'סמן כמה המצב המתואר במשפט קשור לפחדים שלך מ-1 קשור מאוד עד 9 לא קשור כלל'}], 
+        Q6         : [{inherit:'defaultStim', media: 'סמן עד כמה המצב המתואר במשפט רלוונטי לחיים של סטודנטים יהודים וערבים בישראל מ-1 רלוונטי לסטונטים ערבים בלבד עד 9 רוונטי לסטודנטים יהודים בלבד '}]  
 	    
     });
 
-API.addStimulusSets({
+
+
+    API.addStimulusSets({
         inst_welcome : [{media: {html: current.instructions.inst_welcome}}],
         inst_start   : [{media: {html: current.instructions.inst_start}}],
         inst_bye     : [{media: {html: current.instructions.inst_bye}}]
@@ -195,8 +197,7 @@ API.addStimulusSets({
         ]
     });
 
-   
-	/***********************************************
+    /***********************************************
     // Main trials
      ***********************************************/
 
@@ -213,7 +214,7 @@ API.addStimulusSets({
             },
             {
                 conditions: [{type:'inputEquals', value:'qest'}], 
-            ctions: [
+                actions: [
                     {type:'hideStim', handle:'All'},
                     {type:'log'},
                     {type:'removeInput', handle:['All']},
@@ -297,7 +298,7 @@ API.addStimulusSets({
         		    {type:'showStim', handle: 'Q4'},
                 ]
             }, 
-
+            
             
             {
                 conditions: [
@@ -325,7 +326,7 @@ API.addStimulusSets({
                 conditions: [
                     {type:'inputEquals', value:['q5_1', 'q5_2', 'q5_3', 'q5_4', 'q5_5', 'q5_6', 'q5_7', 'q5_8', 'q5_9']}
                 ],
-		        actions: [
+		    actions: [
                     {type:'hideStim', handle:'All'},
                     {type:'log'},
                     {type:'removeInput', handle:['All']},
@@ -347,13 +348,16 @@ API.addStimulusSets({
                 conditions: [
                     {type:'inputEquals', value:['q5_1', 'q5_2', 'q5_3', 'q5_4', 'q5_5', 'q5_6', 'q5_7', 'q5_8', 'q5_9']}
                 ],
-                actions: [
+		    
+		    
+               actions: [
                     {type:'hideStim', handle:'All'},
                     {type:'log'},
                     {type:'removeInput', handle:['All']},
                     {type:'endTrial'}
                 ]
             }, 
+            
             
             
             {
@@ -378,6 +382,7 @@ API.addStimulusSets({
     // Script
      ***********************************************/
 
+    
     
     API.addTrialSet('scripts', [
         {inherit: 'stimulus_trial', data: {text: 'אני עובר במחסום וחייל ישראלי צועק מאיים עלי ברובה', sid: 1}},
@@ -484,7 +489,7 @@ API.addStimulusSets({
         {inherit: 'stimulus_trial', data: {text: 'انا ادخل للصندوق زجاجات البلاستيك واضعها بجانب زجاجات الزجاج', sid: 102}},
         {inherit: 'stimulus_trial', data: {text: 'انا ارسم على الورقه ثلاث مربعات وخمس مثلثات صفراء', sid: 103}},
         {inherit: 'stimulus_trial', data: {text: 'انا اضع مجلد الدراسة في اعلى رف من المكتبة ', sid: 104}},
-        {inherit: 'stimulus_trial', data: {text: ' انتظر ثلاث دقائق حتى يسخن الماء في المسخن الكهربائي', sid: 105}},
+        {inherit: 'stimulus_trial', data: {text: ' انتظر ثلاث دقائق حتى يسخن الماء في المسخن الكهربائي', sid: 105}},
         {inherit: 'stimulus_trial', data: {text: 'انا اتفقد وجود أوراق فارغه داخل الدفتر صالحه للاستعمال', sid: 106}},
         {inherit: 'stimulus_trial', data: {text: 'انا أصنع ثلاثة أكوام مختلفة من الملابس بألوان مختلفة', sid: 107}},
         {inherit: 'stimulus_trial', data: {text: 'انا ارفع حقيبتي عن الأرض واضعها على سطح المكتب', sid: 108}},
@@ -520,7 +525,7 @@ API.addStimulusSets({
 					mixer: 'repeat',
 					times: 120,
 					data: [
-                        {inherit:{set:'scripts', type:'equalDistribution', n:120, seed:'a'}, data:{block: 'practice'}}
+                        {inherit:{set:'scripts', type:'equalDistribution', n: 120, seed:'a'}, data:{block: 'practice'}}
 					]
 				}
 			]
