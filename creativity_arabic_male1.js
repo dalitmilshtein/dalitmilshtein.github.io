@@ -88,7 +88,7 @@ define(['pipAPI'], function(APIconstructor) {
     });
 
     /***********************************************
-    // Stimuli
+    // Stimuli -  to change Q and add Q6 with Jamalat	   
      ***********************************************/
 
     API.addStimulusSets({
@@ -98,8 +98,9 @@ define(['pipAPI'], function(APIconstructor) {
 	Q2          : [{inherit:'defaultStim', media: 'حدد من 1 حتى 9 ما هو احتمال حصول ما ذكر بالجملة لك ؟1 لا يوجد احتمال 9 احتمال قوي جدا  '}],           
 	Q3          : [{inherit:'defaultStim', media: 'حدد من 1 حتى 9 مدى كون الوضع الذي تخيلته  حي ومفصل  ؟1 ليس حي ولا مفصل 9 حي ومفصل جدا'}],
         Q4          : [{inherit:'defaultStim', media: 'حدد من 1 حتى 9 كم استهلكت من جهد حتى تتوقف عن التفكير بالوضع الموصوف بالجملة  ؟1 بلا جهد9 جهد كبير  '}],    
-	Q9          : [{inherit:'defaultStim', media: ' حدد من 1 حتى 9 كم كان الوضع الموصوف في الجملة مرتبط بمخاوفك؟1 غير مرتبط بتاتا9مرتبط جدا  '}]   
-	    
+	Q5          : [{inherit:'defaultStim', media: ' حدد من 1 حتى 9 كم كان الوضع الموصوف في الجملة مرتبط بمخاوفك؟1 غير مرتبط بتاتا9مرتبط جدا  '}],
+        Q6          : [{inherit:'defaultStim', media: ' حدد من 1 حتى 9 كم كان الوضع الموصوف في الجملة مرتبط بمخاوفك؟1 غير مرتبط بتاتا9مرتبط جدا  '}]   
+ 
     });
 
 
@@ -323,6 +324,28 @@ define(['pipAPI'], function(APIconstructor) {
                 conditions: [
                     {type:'inputEquals', value:['q5_1', 'q5_2', 'q5_3', 'q5_4', 'q5_5', 'q5_6', 'q5_7', 'q5_8', 'q5_9']}
                 ],
+		    actions: [
+                    {type:'hideStim', handle:'All'},
+                    {type:'log'},
+                    {type:'removeInput', handle:['All']},
+        		    {type:'setInput', input:{handle:'q5_1', on: 'keypressed', key: '1'}},
+        		    {type:'setInput', input:{handle:'q5_2', on: 'keypressed', key: '2'}},
+        		    {type:'setInput', input:{handle:'q5_3', on: 'keypressed', key: '3'}},
+        		    {type:'setInput', input:{handle:'q5_4', on: 'keypressed', key: '4'}},
+        		    {type:'setInput', input:{handle:'q5_5', on: 'keypressed', key: '5'}},
+        		    {type:'setInput', input:{handle:'q5_6', on: 'keypressed', key: '6'}},
+        		    {type:'setInput', input:{handle:'q5_7', on: 'keypressed', key: '7'}},
+        		    {type:'setInput', input:{handle:'q5_8', on: 'keypressed', key: '8'}},
+        		    {type:'setInput', input:{handle:'q5_9', on: 'keypressed', key: '9'}},
+                    {type:'resetTimer'},
+        		    {type:'showStim', handle: 'Q6'},
+                ]
+            }, 
+            
+            {
+                conditions: [
+                    {type:'inputEquals', value:['q5_1', 'q5_2', 'q5_3', 'q5_4', 'q5_5', 'q5_6', 'q5_7', 'q5_8', 'q5_9']}
+                ],
                actions: [
                     {type:'hideStim', handle:'All'},
                     {type:'log'},
@@ -344,6 +367,7 @@ define(['pipAPI'], function(APIconstructor) {
             {inherit:'Q3'},
             {inherit:'Q4'},
             {inherit:'Q5'},
+	    {inherit:'Q6'},
             { media: '<%= trialData.text %>', css:{fontSize: '30px'}, handle:'target', data:{sid:'<%= trialData.sid %>'}}
 
 
