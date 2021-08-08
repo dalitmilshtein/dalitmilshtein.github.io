@@ -101,7 +101,7 @@
         Q3         : [{inherit:'defaultStim', media: 'סמן עד כמה המצב שאתה מדמיין חי ומפורט מ-1 כלל לא חי ומפורט עד 9 חי ומפורט מאוד  '}],
         Q4          : [{inherit:'defaultStim', media: ' סמן כמה המצב המתואר במשפט קשור לפחדים שלך מ-1 קשור מאוד עד 9 לא קשור כלל'}],    
 	Q5         : [{inherit:'defaultStim', media: 'סמן עד כמה המצב רלוונטי לסטודנטים יהודים וערבים בישראל מ-1 לערבים בלבד עד 9 ליהודים בלבד'}], 
-           
+       Q6         : [{inherit:'defaultStim', media: 'סמן  כמה מאמץ השקעת על מנת להפסיק לחשוב על המצב המתואר במשפט מ-1 ללא מאמץ כלל עד 9 מאמץ רב'}],     
     });
 
 
@@ -326,7 +326,29 @@
                 conditions: [
                     {type:'inputEquals', value:['q5_1', 'q5_2', 'q5_3', 'q5_4', 'q5_5', 'q5_6', 'q5_7', 'q5_8', 'q5_9']}
                 ],
-		   		    
+		   actions: [
+                    {type:'hideStim', handle:'All'},
+                    {type:'log'},
+                    {type:'removeInput', handle:['All']},
+        		    {type:'setInput', input:{handle:'q1_1', on: 'keypressed', key: '1'}},
+        		    {type:'setInput', input:{handle:'q1_2', on: 'keypressed', key: '2'}},
+        		    {type:'setInput', input:{handle:'q1_3', on: 'keypressed', key: '3'}},
+        		    {type:'setInput', input:{handle:'q1_4', on: 'keypressed', key: '4'}},
+        		    {type:'setInput', input:{handle:'q1_5', on: 'keypressed', key: '5'}},
+        		    {type:'setInput', input:{handle:'q1_6', on: 'keypressed', key: '6'}},
+        		    {type:'setInput', input:{handle:'q1_7', on: 'keypressed', key: '7'}},
+        		    {type:'setInput', input:{handle:'q1_8', on: 'keypressed', key: '8'}},
+        		    {type:'setInput', input:{handle:'q1_9', on: 'keypressed', key: '9'}},
+                    {type:'resetTimer'},
+        		    {type:'showStim', handle: 'Q6'},
+                ]
+            }, 	
+
+
+            {
+                conditions: [
+                    {type:'inputEquals', value:['q1_1', 'q1_2', 'q1_3', 'q1_4', 'q1_5', 'q1_6', 'q1_7', 'q1_8', 'q1_9']}
+                ], 		    
                actions: [
                     {type:'hideStim', handle:'All'},
                     {type:'log'},
@@ -348,6 +370,7 @@
             {inherit:'Q3'},
             {inherit:'Q4'},
             {inherit:'Q5'},
+	    {inherit:'Q6'},	
 	    { media: '<%= trialData.text %>', css:{fontSize: '30px'}, handle:'target', data:{sid:'<%= trialData.sid %>'}}
 
 
