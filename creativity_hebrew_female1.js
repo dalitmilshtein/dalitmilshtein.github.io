@@ -99,8 +99,7 @@
         Q1          : [{inherit:'defaultStim', media: 'סמני מה עוצמת הרגש שהתעורר בך כשקראת ודימיינת את המשפט מ-1 שום רגש כלל עד 9 רגש עז מאוד'}],    
 	Q2         : [{inherit:'defaultStim', media: 'סמני מה הסיכוי שתמצאי את עצמך במצב המתואר במשפט מ-1 אין סיכוי כלל עד 9 סיכוי רב מאוד'}],
         Q3         : [{inherit:'defaultStim', media: 'סמני עד כמה המצב שאת מדמיינת חי ומפורט מ-1 כלל לא חי ומפורט עד 9 חי ומפורט מאוד  '}],
-        Q4          : [{inherit:'defaultStim', media: 'סמני כמה מאמץ השקעת על מנת להפסיק לחשוב על המצב המתואר במשפט מ-1 ללא מאמץ כלל עד 9 מאמץ רב'}],    
-	Q6         : [{inherit:'defaultStim', media: 'סמני כמה המצב המתואר במשפט קשור לפחדים שלך מ-1 קשור מאוד עד 9 לא קשור כלל'}], 
+       	Q4         : [{inherit:'defaultStim', media: 'סמני כמה המצב המתואר במשפט קשור לפחדים שלך מ-1 קשור מאוד עד 9 לא קשור כלל'}], 
         Q5         : [{inherit:'defaultStim', media: 'סמני עד כמה המצב המתואר במשפט רלוונטי לחיים של סטודנטים יהודים וערבים בישראל מ-1 רלוונטי לסטונטים ערבים בלבד עד 9 רוונטי לסטודנטים יהודים בלבד '}]  
 	    
     });
@@ -327,30 +326,7 @@
                 conditions: [
                     {type:'inputEquals', value:['q5_1', 'q5_2', 'q5_3', 'q5_4', 'q5_5', 'q5_6', 'q5_7', 'q5_8', 'q5_9']}
                 ],
-		    actions: [
-                    {type:'hideStim', handle:'All'},
-                    {type:'log'},
-                    {type:'removeInput', handle:['All']},
-        		    {type:'setInput', input:{handle:'q5_1', on: 'keypressed', key: '1'}},
-        		    {type:'setInput', input:{handle:'q5_2', on: 'keypressed', key: '2'}},
-        		    {type:'setInput', input:{handle:'q5_3', on: 'keypressed', key: '3'}},
-        		    {type:'setInput', input:{handle:'q5_4', on: 'keypressed', key: '4'}},
-        		    {type:'setInput', input:{handle:'q5_5', on: 'keypressed', key: '5'}},
-        		    {type:'setInput', input:{handle:'q5_6', on: 'keypressed', key: '6'}},
-        		    {type:'setInput', input:{handle:'q5_7', on: 'keypressed', key: '7'}},
-        		    {type:'setInput', input:{handle:'q5_8', on: 'keypressed', key: '8'}},
-        		    {type:'setInput', input:{handle:'q5_9', on: 'keypressed', key: '9'}},
-                    {type:'resetTimer'},
-        		    {type:'showStim', handle: 'Q6'},
-                ]
-            }, 
-            
-            {
-                conditions: [
-                    {type:'inputEquals', value:['q5_1', 'q5_2', 'q5_3', 'q5_4', 'q5_5', 'q5_6', 'q5_7', 'q5_8', 'q5_9']}
-                ],
-		    
-		    
+		   		    
                actions: [
                     {type:'hideStim', handle:'All'},
                     {type:'log'},
