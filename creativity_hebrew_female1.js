@@ -348,8 +348,7 @@
             {inherit:'Q3'},
             {inherit:'Q4'},
             {inherit:'Q5'},
-	    {inherit:'Q6'},
-            { media: '<%= trialData.text %>', css:{fontSize: '30px'}, handle:'target', data:{sid:'<%= trialData.sid %>'}}
+	    { media: '<%= trialData.text %>', css:{fontSize: '30px'}, handle:'target', data:{sid:'<%= trialData.sid %>'}}
 
 
         ]
